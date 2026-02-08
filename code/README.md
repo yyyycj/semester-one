@@ -1,8 +1,5 @@
 ## Run
-python -m src.main
+python3 -m src.web
 
 ## Tests
-python -m unittest
-
-## Data
-Data files are stored in ./data (JSON). The repo contains only sample data.
+python3 -m unittest
