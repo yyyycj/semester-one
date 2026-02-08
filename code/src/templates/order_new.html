@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Create order</h3>
+<form method="post">
+  <p>product_id: <input name="product_id"></p>
+  <p>planned_qty: <input name="planned_qty"></p>
+  <p>deadline (YYYY-MM-DD optional): <input name="deadline"></p>
+  <p>note: <input name="note"></p>
+  <button type="submit">Save</button>
+</form>
+<p><a href="/">Back</a></p>
+{% endblock %}

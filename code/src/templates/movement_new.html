@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Register movement</h3>
+<form method="post">
+  <p>type: <input name="type" value="INCOME"></p>
+  <p>order_id (optional): <input name="order_id"></p>
+  <p>lines (one per line, format: component_id=qty)</p>
+  <p><textarea name="lines" rows="6" cols="50">C-01=10</textarea></p>
+  <p>note: <input name="note"></p>
+  <button type="submit">Save</button>
+</form>
+<p><a href="/">Back</a></p>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Record test</h3>
+<form method="post">
+  <p>serial_no: <input name="serial_no"></p>
+  <p>result:
+    <select name="result">
+      <option>PASS</option>
+      <option>FAIL</option>
+    </select>
+  </p>
+  <button type="submit">Save</button>
+</form>
+<p><a href="/">Back</a></p>
+{% endblock %}

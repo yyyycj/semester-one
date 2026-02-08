@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+  <h3 class="card-title">Actions</h3>
+  <p class="card-desc">Click an option to perform an operation.</p>
+
+  <div class="actions">
+    <a class="action" href="/products/new">Create product</a>
+    <a class="action" href="/components/new">Create component</a>
+    <a class="action" href="/bom/set">Set BOM</a>
+    <a class="action" href="/orders/new">Create order</a>
+    <a class="action" href="/orders/approve">Approve order</a>
+    <a class="action" href="/movements/new">Register movement</a>
+    <a class="action" href="/units/register">Register serial unit</a>
+    <a class="action" href="/units/test">Record test PASS/FAIL</a>
+    <a class="action" href="/units/ship">Ship unit</a>
+    <a class="action" href="/reports/stock">Report: stock balance</a>
+  </div>
+</div>
+
+{% endblock %}

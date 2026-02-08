@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electrical Equipment Accounting</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <!-- Background layer -->
+  <div class="bg"></div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+      <div class="brand-text">
+        <div class="title">Electrical Equipment Production Accounting</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('report_stock') }}">Stock report</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flashbox">
+          {% for cat, msg in messages %}
+            <div class="flash {{ 'ok' if cat=='ok' else 'err' }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
